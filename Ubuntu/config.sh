@@ -1,6 +1,6 @@
 sudo apt-get update -y
 sudo apt-get upgrade -y
-sudo apt-get install git unzip cmake build-essential libboost1.55-dev libboost1.55-tools-dev libqt4-dev -y
+sudo apt-get install vim git unzip cmake build-essential libboost1.55-dev libboost1.55-tools-dev libqt4-dev -y
 
 
 mkdir tmp; cd tmp
@@ -13,9 +13,11 @@ make
 sudo make install
 
 cd ~/tmp
-wget http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/luna/SR1a/eclipse-cpp-luna-SR1a-linux-gtk-x86_64.tar.gz
+wget http://carroll.aset.psu.edu/pub/eclipse/technology/epp/downloads/release/luna/SR1a/eclipse-cpp-luna-SR1a-linux-gtk-x86_64.tar.gz
 cd /opt
-tar -zxvf ~/tmp/eclipse-cpp-luna-SR1a-linux-gtk-x86_64.tar.gz
+sudo tar -zxvf ~/tmp/eclipse-cpp-luna-SR1a-linux-gtk-x86_64.tar.gz
+sudo ln -s /opt/eclipse/eclipse /usr/bin
+sudo apt-get install openjdk-7-jdk -y
 
 cd ~; sudo rm -rf tmp
 sudo apt-get install ubuntu-desktop -y
